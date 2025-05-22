@@ -1,9 +1,8 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@{
+﻿@{
 	ViewBag.Title = "Error Handling";
 }
 	<h1>Handling Errors</h1>
 	<a asp-controller= "Home" asp-action="throw">Simulate a server error</a><br />
-	<a href="/123>">Simulate an HTTP error</a>
+	<a href="/80085">Simulate an HTTP error</a>
 	<br />
     <a asp-controller ="Home" asp-action="slow">Do slow work</a>

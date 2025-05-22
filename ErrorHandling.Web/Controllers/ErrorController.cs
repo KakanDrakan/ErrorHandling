@@ -13,13 +13,5 @@ namespace ErrorHandling.Web.Controllers
         public IActionResult HttpError(int statusCode) {
             return View(statusCode);
         }
-
-
-
-        [HttpGet("error/{statusCode:int}")]
-        public IActionResult Error(int statusCode) {
-            return View("Error", statusCode);
-        }
-
     }
 }
