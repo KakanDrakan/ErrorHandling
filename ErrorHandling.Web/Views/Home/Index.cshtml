@@ -6,7 +6,10 @@
     </head>
     <body>
 	<h1>Handling Errors</h1>
-	<a asp-controller= "Home" asp-action="throw">Simulate a server error</a>
+	<a asp-controller= "Home" asp-action="throw">Simulate a server error</a><br />
+	<a href="/123>">Simulate an HTTP error</a>
+	<br />
+    <a asp-controller ="Home" asp-action="slow">Do slow work</a>
 
     </body>
     </html>
