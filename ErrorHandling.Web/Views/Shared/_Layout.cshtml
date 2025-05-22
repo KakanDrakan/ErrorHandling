@@ -1,19 +1,25 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewBag.Title</title>
-
+    <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
 </head>
 <body>
-    <h2>@ViewBag.Title</h2>
-<div>
-    @RenderBody()
-</div>
-<footer>
-    &copy;2025
-</footer>
+
+    <header>
+        <h1>@ViewBag.Title</h1>
+    </header>
+
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <hr />
+        <p>&copy; @DateTime.Now.Year</p>
+    </footer>
+
 </body>
 </html>
