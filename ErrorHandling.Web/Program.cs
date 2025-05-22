@@ -7,12 +7,13 @@ namespace ErrorHandling.Web
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllersWithViews();
             var app = builder.Build();
-            
-            app.MapControllers();
 
             if (!app.Environment.IsDevelopment())
+            {
                 app.UseExceptionHandler("/error/exception");
-
+                app.UseStatusCodePagesWithRedirects("/error/http/{0}");
+            }
+            app.MapControllers();
             app.Run();
         }
     }
